@@ -1,0 +1,89 @@
+body{
+    background-color: blanchedalmond;
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    text-align: center;
+    font-family: courier;
+    color: black;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    
+}
+#right{
+    float: right;
+    width: 50%;
+    height: 90%;
+    background-color: cadetblue; 
+    display: inline-block;
+}
+#score{
+    text-align: center;
+    color: currentColor;
+}
+#left{
+    float: left;
+    height: 90%;
+    width: 50%;
+    background-color: black;
+    display: inline-block;
+}
+#bars{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center; 
+
+}
+#one{
+    display: inline-block;
+    height: 12%;
+    width: 45%;
+    background-color: cadetblue;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 20px;
+}
+#two{
+    display: inline-block;
+    height: 12%;
+    width: 45%;
+    background-color: darkslategrey;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 20px;
+}
+#colorname{
+    width: 100%;
+    background-color: whitesmoke;
+    height: 10%;
+    text-align: center;
+}
+#box{
+    width: 100%;
+    margin: 20%;
+}
+.square{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+    
+}
+.row1{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+}
+.row2{
+     margin-left: 50%;
+    transform: translateX(-50%);
+}
+.row3{
+     margin-left: 50%;
+    transform: translateX(-50%);
+}
