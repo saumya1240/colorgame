@@ -7,31 +7,31 @@
     <body>
         <h1>COLOR GAME</h1>
             <div id="right">
-                <p id="score">[0]</p>
-        s</div>
+                <p id="close">[<span id="points"></span>]</p>
+        </div>
             <div id="left">
                 <div id="bars">
-                    <button type="button" name="start" id="one">START</button>
-                    <button type="button" name="timer" id="two">20</button>
+                    <button type="submit" name="start" onclick="clock()" id="one">START</button>
+                    <p id="two">20</p>
                 </div>
                 <div id="colorname">
-                    <h2 id="name"></h2>
+                    <p id="best"></p>
                 </div>
                 <div id="box">
                     <div class="row1">
-                        <div id="first" class="square"></div>                    
-                        <div id="second" class="square"></div>
-                        <div id="third" class="square"></div>
+                        <button id="first" onclick="dual1()" class="square"></button>                    
+                        <button id="second" onclick="dual2()" class="square"></button>
+                        <button id="third" onclick="dual3()" class="square"></button>
                     </div>
                     <div class="row2">
-                        <div id="fourth" class="square"></div>
-                        <div id="fifth" class="square"></div>
-                        <div id="sixth" class="square"></div>
+                        <button id="fourth" onclick="dual4()" class="square"></button>
+                        <button id="fifth"  onclick="dual5()" class="square"></button>
+                        <button id="sixth" onclick="dual6()" class="square"></button>
                     </div>
                     <div class="row3">
-                        <div id="seventh" class="square"></div>
-                        <div id="eight" class="square"></div>
-                        <div id="ninth" class="square"></div>
+                        <button id="seventh" onclick="dual7()" class="square"></button>
+                        <button id="eight" onclick="dual8()" class="square"></button>
+                        <button id="ninth" onclick="dual9()" class="square"></button>
                     </div>
                 </div>
             </div>
