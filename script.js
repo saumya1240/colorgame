@@ -32,97 +32,105 @@ function naming(){
     document.getElementById("ninth").innerHTML=box[8];
     
 }
-function clock(){
-     naming();
-    var timer = 20;
-    var downloadTimer = setInterval(function(){
-    timer--;
-    document.getElementById("two").innerHTML= timer;
-    if(timer <= 0)
-        clearInterval(downloadTimer);
-    },1000);
-
-}
-function dual1(){
-    var text=document.getElementById("best").innerHTML;
-    var one=document.getElementById("first").innerHTML;
-    if(text==one){
+function comparison(ans){
+     var ques=document.getElementById("best").innerHTML;
+    if(ques==ans){
         ++score;
     document.getElementById("points").innerHTML=score;
     }
+}
+function dual1(){
+    var ans=document.getElementById("first").innerHTML;
+    comparison(ans);
     naming();
 }
 function dual2(){
-    var text=document.getElementById("best").innerHTML;
-    var two=document.getElementById("second").innerHTML;
-    if(text==two){
-        ++score;
-    document.getElementById("points").innerHTML=score;
-    }
+    var ans=document.getElementById("second").innerHTML;
+   comparison(ans);
     naming();
 }
 function dual3(){
-    var text=document.getElementById("best").innerHTML;
-    var three=document.getElementById("third").innerHTML;
-    if(text==three){
-        ++score;
-    document.getElementById("points").innerHTML=score;
-    }
+    var ans=document.getElementById("third").innerHTML;
+     comparison(ans);
     naming();
 }
 function dual4(){
-    var text=document.getElementById("best").innerHTML;
-    var four=document.getElementById("fourth").innerHTML;
-    if(text==four){
-        ++score;
-    document.getElementById("points").innerHTML=score;
-    }
+        var ans=document.getElementById("fourth").innerHTML;
+     comparison(ans);
     naming();
 }
 function dual5(){
-    var text=document.getElementById("best").innerHTML;
-    var five=document.getElementById("fifth").innerHTML;
-    if(text==five){
-        ++score;
-    document.getElementById("points").innerHTML=score;
-    }
+        var ans=document.getElementById("fifth").innerHTML;
+     comparison(ans);
     naming();
 }
 function dual6(){
-    var text=document.getElementById("best").innerHTML;
-    var six=document.getElementById("sixth").innerHTML;
-    if(text==six){
-        ++score;
-    document.getElementById("points").innerHTML=score;
-    }
+    var ans=document.getElementById("sixth").innerHTML;
+     comparison(ans);
         naming();
 }
 function dual7(){
-    var text=document.getElementById("best").innerHTML;
-    var seven=document.getElementById("seventh").innerHTML;
-    if(text==seven){
-        ++score;
-    document.getElementById("points").innerHTML=score;
-    }
+    var ans=document.getElementById("seventh").innerHTML;
+    comparison(ans);
     naming();
 }
 function dual8(){
-    var text=document.getElementById("best").innerHTML;
-    var eigth=document.getElementById("eight").innerHTML;
-    if(text==eigth){
-        ++score;
-    document.getElementById("points").innerHTML=score;
-    }
+    var ans=document.getElementById("eight").innerHTML;
+    comparison(ans);
     naming();
 }
 function dual9(){
-    var text=document.getElementById("best").innerHTML;
-    var nine=document.getElementById("ninth").innerHTML;
-    if(text==nine){
-        ++score;
-    document.getElementById("points").innerHTML=score;
-    }
+    var ans=document.getElementById("ninth").innerHTML;
+    comparison(ans);
         naming();
 }
+    function clock(){
+     naming();
+    var timer = 20;
+         document.getElementById("one").disabled=true;
+    document.getElementById("two").style.backgroundColor="green";
+            document.getElementById("first").disabled=false;
+            document.getElementById("second").disabled=false;
+            document.getElementById("third").disabled=false;
+            document.getElementById("fourth").disabled=false;                document.getElementById("fifth").disabled=false;
+            document.getElementById("sixth").disabled=false;
+            document.getElementById("seventh").disabled=false;
+            document.getElementById("eight").disabled=false;
+            document.getElementById("ninth").disabled=false;  
+        document.getElementById("first").style.color="black";
+        document.getElementById("second").style.color="black";
+        document.getElementById("third").style.color="black";
+        document.getElementById("fourth").style.color="black";
+        document.getElementById("fifth").style.color="black";
+        document.getElementById("sixth").style.color="black";
+        document.getElementById("seventh").style.color="black";
+        document.getElementById("eight").style.color="black";
+        document.getElementById("ninth").style.color="black";
+    var downloadTimer = setInterval(function(){
+    timer--;
+    document.getElementById("two").innerHTML= timer;
+    if(timer <= 0){
+        document.getElementById("two").style.backgroundColor="red";
+        clearInterval(downloadTimer);
+        stop(timer);
+    document.getElementById("first").disabled=true;
+    document.getElementById("second").disabled=true;
+    document.getElementById("third").disabled=true;
+    document.getElementById("fourth").disabled=true;
+    document.getElementById("fifth").disabled=true;
+    document.getElementById("sixth").disabled=true;
+    document.getElementById("seventh").disabled=true;
+    document.getElementById("eight").disabled=true;
+    document.getElementById("ninth").disabled=true;
+        document.getElementById("one").disabled=false;
+    }
+    },1000);
+    function stop(timer){
+        if(timer==0){
+            alert("TIME UP! POINTS : " +score );
+            document.getElementById("points").innerHTML=0;
+            score=0;
+        }
+    }
 
-    
+}
